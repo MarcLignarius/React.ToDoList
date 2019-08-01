@@ -63,18 +63,18 @@ This is a simple but functional CRUD (Create, Read, Update, Delete) app which al
 | ![Image of ss7](https://i.imgur.com/ouNg4m7.png) | ![Image of ss8](https://i.imgur.com/f6xgAie.png) |  ![Image of ss9](https://i.imgur.com/aT8vnoe.png)|
 
 ## Minimum Viable Product
-- [checkbox:checked] As a user, I want to add a task 
-- [checkbox:checked] As a user, I want to edit a task
-- [checkbox:checked] As a user, I want to delete a task
+- [x] As a user, I want to add a task 
+- [x] As a user, I want to edit a task
+- [x] As a user, I want to delete a task
 
 ## Stretch Goals
-- [checkbox:checked] As a user, I want the program to prompt me to confirm my actions
-- [checkbox:checked] As a user, I want the program to confirm the latest action
-- [checkbox:unchecked] As a user, I want to add categories
-- [checkbox:unchecked] As a user, I want to edit categories
-- [checkbox:unchecked] As a user, I want to delete categories
-- [checkbox:unchecked] As a user, I want to reorder tasks by clicking and dragging them 
-- [checkbox:unchecked] As a user, I want to choose a different theme
+- [x] As a user, I want the program to prompt me to confirm my actions
+- [x] As a user, I want the program to confirm the latest action
+- [] As a user, I want to add categories
+- [] As a user, I want to edit categories
+- [] As a user, I want to delete categories
+- [] As a user, I want to reorder tasks by clicking and dragging them 
+- [] As a user, I want to choose a different theme
 
 ## Known Bugs
 There are no known bugs as of that last release.
