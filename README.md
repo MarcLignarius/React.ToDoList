@@ -70,11 +70,11 @@ This is a simple but functional CRUD (Create, Read, Update, Delete) app which al
 ## Stretch Goals
 - [x] As a user, I want the program to prompt me to confirm my actions
 - [x] As a user, I want the program to confirm the latest action
-- [] As a user, I want to add categories
-- [] As a user, I want to edit categories
-- [] As a user, I want to delete categories
-- [] As a user, I want to reorder tasks by clicking and dragging them 
-- [] As a user, I want to choose a different theme
+- [ ] As a user, I want to add categories
+- [ ] As a user, I want to edit categories
+- [ ] As a user, I want to delete categories
+- [ ] As a user, I want to reorder tasks by clicking and dragging them 
+- [ ] As a user, I want to choose a different theme
 
 ## Known Bugs
 There are no known bugs as of that last release.
