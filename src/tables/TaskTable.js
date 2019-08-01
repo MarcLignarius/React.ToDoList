@@ -20,7 +20,7 @@ const TaskTable = props => {
         props.deleteTask(id)
       } else {
         swal("Task has not been deleted.", {
-          icon: "info",
+          icon: "error",
         });
       }
     })
@@ -41,6 +41,7 @@ const TaskTable = props => {
               <td>{task.name}</td>
               <td>
                 <button onClick={() => {props.editRow(task)}} className="button muted-button">Edit</button>
+                <div className='divider'></div>
                 <button onClick={() => handleOnDeleteClick(task.id)} className="button muted-button">Delete</button>
               </td>
             </tr>

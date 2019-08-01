@@ -657,6 +657,12 @@ caption {
 .contain-table {
   overflow-x: auto; }
 
+.divider {
+  width: 5px;
+  height: auto;
+  display: inline-block;
+}
+
 @media (min-width: 600px) {
   .contain-table {
     width: 100%; } }

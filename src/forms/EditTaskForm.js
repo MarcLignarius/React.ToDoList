@@ -19,7 +19,9 @@ const EditTaskForm = props => {
         });
         props.editTask(id, task)
       } else {
-        swal("Changes have not been saved.");
+        swal("Changes have not been saved.", {
+          icon: "error",
+        });
       }
     })
   }

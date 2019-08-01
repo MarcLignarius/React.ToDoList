@@ -7,7 +7,7 @@ const AddTaskForm = props => {
     swal({
       title: "Add task?",
       text: "Click OK to add task.",
-      icon: "warning",
+      icon: "info",
       buttons: true,
       dangerMode: true,
     })
@@ -20,7 +20,7 @@ const AddTaskForm = props => {
         props.addTask(task)
       } else {
         swal("Task will not be added.", {
-          icon: "info",
+          icon: "error",
         });
       }
     })
