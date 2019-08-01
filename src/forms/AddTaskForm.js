@@ -17,7 +17,7 @@ const AddUserForm = props => {
         swal("User has been added.", {
           icon: "success",
         });
-        props.addUser(user)
+        props.addTask(user)
       } else {
         swal("User will not be added.", {
           icon: "info",

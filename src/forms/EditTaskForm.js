@@ -3,7 +3,7 @@ import swal from 'sweetalert';
 
 const EditUserForm = props => {
 
-  const handleOnEditClick= (id, user) => {
+  const handleOnEditClick= (id, task) => {
     swal({
       title: "Save?",
       text: "Click OK to save changes.",
@@ -17,37 +17,37 @@ const EditUserForm = props => {
         swal("Changes have been saved.", {
           icon: "success",
         });
-        props.editUser(id, user)
+        props.editTask(id, task)
       } else {
         swal("Changes have not been saved.");
       }
     })
   }
 
-  const [user, setUser] = useState(props.currentUser)
+  const [task, setTask] = useState(props.currentTask)
 
   useEffect(
     () => {
-      setUser(props.currentUser)
+      setTask(props.currentTask)
     },
     [ props ]
   )
 
   const handleInputChange = event => {
     const { name, value } = event.target
-    setUser({ ...user, [name]: value })
+    setTask({ ...task, [name]: value })
   }
 
   return (
     <form onSubmit={event => {
       event.preventDefault()
-      handleOnEditClick(user.id, user)
+      handleOnEditClick(task.id, task)
     }}
     >
       <label>Name</label>
-      <input type="text" name="name" value={user.name} onChange={handleInputChange} />
+      <input type="text" name="name" value={task.name} onChange={handleInputChange} />
       <label>Username</label>
-      <input type="text" name="username" value={user.username} onChange={handleInputChange} />
+      <input type="text" name="username" value={task.taskname} onChange={handleInputChange} />
       <button>Update user</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">Cancel</button>
     </form>

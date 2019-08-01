@@ -9,19 +9,19 @@ const App = () => {
   const [tasks, setTasks] = useState(tasksData)
   const [editing, setEditing] = useState(false)
   const initialFormState = { id: null, name: '', username: ''}
-  const [currentUser, setCurrentUser] = useState(initialFormState)
+  const [currentTask, setCurrentTask] = useState(initialFormState)
 
-  const addUser = task => {
+  const addTask = task => {
     task.id = tasks.length + 1
     setTasks([...tasks, task])
 	}
 	
-	const editRow = user => {
+	const editRow = task => {
     setEditing(true)
-    setCurrentUser({ id: user.id, name: user.name, username: user.username })
+    setCurrentTask({ id: task.id, name: task.name, taskname: task.taskname })
   }
 
-  const editUser = (id, updatedTask) => {
+  const editTask = (id, updatedTask) => {
     setEditing(false)
     setTasks(tasks.map(task => (task.id === id ? updatedTask : task)))
   }
@@ -40,14 +40,14 @@ const App = () => {
 						<EditTaskForm
 							editing={editing}
 							setEditing={setEditing}
-							currentUser={currentUser}
-							editUser={editUser}
+							currentTask={currentTask}
+							editTask={editTask}
 						/>
 					</Fragment>
 				) : (
 					<Fragment>
 						<h2>Add user</h2>
-						<AddTaskForm addUser={addUser} />
+						<AddTaskForm addTask={addTask} />
 					</Fragment>
 				)}
 			</div>
