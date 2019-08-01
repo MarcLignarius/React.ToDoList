@@ -5,22 +5,22 @@ const TaskTable = props => {
 
   const handleOnDeleteClick = id => {
     swal({
-      title: "Are you sure?",
-      text: "Click ok to delete task.",
-      icon: "warning",
+      title: 'Are you sure?',
+      text: 'Click ok to delete task.',
+      icon: 'warning',
       buttons: true,
       dangerMode: true,
     })
     .then(
       (willDelete) => {
       if (willDelete) {
-        swal("Task has been deleted.", {
-          icon: "success",
+        swal('Task has been deleted.', {
+          icon: 'success',
         });
         props.deleteTask(id)
       } else {
-        swal("Task has not been deleted.", {
-          icon: "error",
+        swal('Task has not been deleted.', {
+          icon: 'error',
         });
       }
     })
@@ -40,9 +40,9 @@ const TaskTable = props => {
             <tr key={task.id}>
               <td>{task.name}</td>
               <td>
-                <button onClick={() => {props.editRow(task)}} className="button muted-button">Edit</button>
+                <button onClick={() => {props.editRow(task)}} className='button muted-button'>Edit</button>
                 <div className='divider'></div>
-                <button onClick={() => handleOnDeleteClick(task.id)} className="button muted-button">Delete</button>
+                <button onClick={() => handleOnDeleteClick(task.id)} className='button muted-button'>Delete</button>
               </td>
             </tr>
           ))

@@ -5,22 +5,22 @@ const EditTaskForm = props => {
 
   const handleOnEditClick= (id, task) => {
     swal({
-      title: "Save?",
-      text: "Click OK to save changes.",
-      icon: "info",
+      title: 'Save?',
+      text: 'Click OK to save changes.',
+      icon: 'info',
       buttons: true,
       dangerMode: true,
     })
     .then(
       (willEdit) => {
       if (willEdit) {
-        swal("Changes have been saved.", {
-          icon: "success",
+        swal('Changes have been saved.', {
+          icon: 'success',
         });
         props.editTask(id, task)
       } else {
-        swal("Changes have not been saved.", {
-          icon: "error",
+        swal('Changes have not been saved.', {
+          icon: 'error',
         });
       }
     })
@@ -47,9 +47,10 @@ const EditTaskForm = props => {
     }}
     >
       <label>Description</label>
-      <input type="text" name="name" value={task.name} onChange={handleInputChange} />
+      <input type='text' name='name' value={task.name} onChange={handleInputChange} />
       <button>Update task</button>
-      <button onClick={() => props.setEditing(false)} className="button muted-button">Cancel</button>
+      <div className='divider'></div>
+      <button onClick={() => props.setEditing(false)} className='button muted-button'>Cancel</button>
     </form>
   )
 }

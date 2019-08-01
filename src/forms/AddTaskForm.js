@@ -5,22 +5,22 @@ const AddTaskForm = props => {
 
   const handleOnAddClick = task => {
     swal({
-      title: "Add task?",
-      text: "Click OK to add task.",
-      icon: "info",
+      title: 'Add task?',
+      text: 'Click OK to add task.',
+      icon: 'info',
       buttons: true,
       dangerMode: true,
     })
     .then(
       (willAdd) => {
       if (willAdd) {
-        swal("Task has been added.", {
-          icon: "success",
+        swal('Task has been added.', {
+          icon: 'success',
         });
         props.addTask(task)
       } else {
-        swal("Task will not be added.", {
-          icon: "error",
+        swal('Task will not be added.', {
+          icon: 'error',
         });
       }
     })
@@ -43,7 +43,7 @@ const AddTaskForm = props => {
       setTask(initialFormstate)
     }}>
       <label>Description</label>
-      <input type="text" name="name" value={task.name} onChange={handleInputChange} />
+      <input type='text' name='name' value={task.name} onChange={handleInputChange} required/>
       <button>Add new task</button>
     </form>
   )

@@ -35,9 +35,9 @@ const App = () => {
   }
 
   return (
-		<div className="container">
+		<div className='container'>
 			<h1>My Todo List</h1>
-			<div className="flex-large">
+			<div className='flex-large'>
 				{editing ? (
 					<Fragment>
 						<h2>Edit Task</h2>
@@ -55,7 +55,7 @@ const App = () => {
 					</Fragment>
 				)}
 			</div>
-			<div className="flex-large">
+			<div className='flex-large'>
 				<h2>View Tasks</h2>
 				<TaskTable tasks={tasks} editRow={editRow} deleteTask={deleteTask} />
 			</div>
