@@ -37,29 +37,27 @@ const App = () => {
   return (
 		<div className="container">
 			<h1>CRUD App with Hooks</h1>
-			<div className="flex-row">
-				<div className="flex-large">
-					{editing ? (
-						<Fragment>
-							<h2>Edit user</h2>
-							<EditUserForm
-								editing={editing}
-								setEditing={setEditing}
-								currentUser={currentUser}
-								editUser={editUser}
-							/>
-						</Fragment>
-					) : (
-						<Fragment>
-							<h2>Add user</h2>
-							<AddUserForm addUser={addUser} />
-						</Fragment>
-					)}
-				</div>
-				<div className="flex-large">
-					<h2>View users</h2>
-					<UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
-				</div>
+			<div className="flex-large">
+				{editing ? (
+					<Fragment>
+						<h2>Edit user</h2>
+						<EditUserForm
+							editing={editing}
+							setEditing={setEditing}
+							currentUser={currentUser}
+							editUser={editUser}
+						/>
+					</Fragment>
+				) : (
+					<Fragment>
+						<h2>Add user</h2>
+						<AddUserForm addUser={addUser} />
+					</Fragment>
+				)}
+			</div>
+			<div className="flex-large">
+				<h2>View users</h2>
+				<UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
 			</div>
 		</div>
 	)
