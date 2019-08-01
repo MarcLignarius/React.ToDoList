@@ -1,19 +1,19 @@
 import React, { useState, Fragment } from 'react'
-import UserTable from './tables/UserTable'
-import AddUserForm from './forms/AddUserForm'
-import EditUserForm from './forms/EditUserForm'
+import TaskTable from './tables/TaskTable'
+import AddTaskForm from './forms/AddTaskForm'
+import EditTaskForm from './forms/EditTaskForm'
 
 const App = () => {
-  const usersData = []
+  const tasksData = []
 
-  const [users, setUsers] = useState(usersData)
+  const [tasks, setTasks] = useState(tasksData)
   const [editing, setEditing] = useState(false)
   const initialFormState = { id: null, name: '', username: ''}
   const [currentUser, setCurrentUser] = useState(initialFormState)
 
-  const addUser = user => {
-    user.id = users.length + 1
-    setUsers([...users, user])
+  const addUser = task => {
+    task.id = tasks.length + 1
+    setTasks([...tasks, task])
 	}
 	
 	const editRow = user => {
@@ -21,13 +21,13 @@ const App = () => {
     setCurrentUser({ id: user.id, name: user.name, username: user.username })
   }
 
-  const editUser = (id, updatedUser) => {
+  const editUser = (id, updatedTask) => {
     setEditing(false)
-    setUsers(users.map(user => (user.id === id ? updatedUser : user)))
+    setTasks(tasks.map(task => (task.id === id ? updatedTask : task)))
   }
 
   const deleteUser = id => {
-    setUsers(users.filter(user => user.id !== id))
+    setTasks(tasks.filter(task => task.id !== id))
   }
 
   return (
@@ -37,7 +37,7 @@ const App = () => {
 				{editing ? (
 					<Fragment>
 						<h2>Edit user</h2>
-						<EditUserForm
+						<EditTaskForm
 							editing={editing}
 							setEditing={setEditing}
 							currentUser={currentUser}
@@ -47,13 +47,13 @@ const App = () => {
 				) : (
 					<Fragment>
 						<h2>Add user</h2>
-						<AddUserForm addUser={addUser} />
+						<AddTaskForm addUser={addUser} />
 					</Fragment>
 				)}
 			</div>
 			<div className="flex-large">
 				<h2>View users</h2>
-				<UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
+				<TaskTable tasks={tasks} editRow={editRow} deleteUser={deleteUser} />
 			</div>
 		</div>
 	)

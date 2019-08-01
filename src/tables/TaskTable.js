@@ -36,8 +36,8 @@ const UserTable = props => {
         </tr>
       </thead>
       <tbody>
-        {props.users.length > 0 ? (
-          props.users.map(user => (
+        {props.tasks.length > 0 ? (
+          props.tasks.map(user => (
             <tr key={user.id}>
               <td>{user.name}</td>
               <td>{user.username}</td>
