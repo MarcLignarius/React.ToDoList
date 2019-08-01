@@ -1,68 +1,85 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# To do list
 
-## Available Scripts
+#### _React Week 3 and 4, Capstone Project_
 
-In the project directory, you can run:
+#### By _**Marc Davies**_
 
-### `npm start`
+![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Table of Contents
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+<!--ts-->
+   * [Description](#description)
+   * [Technologies Used](#technologies-used)
+   * [Setup and Installation](#setup-and-installation)
+   * [User Stories](#user-stories)
+      * [Adding a Task](#adding-a-task)
+      * [Editing a Task](#editing-a-task)
+      * [Deleting a Task](#deleting-a-task)
+   * [Mimimum Viable Product](#minimum-viable-product)
+   * [Stretch Goals](#stretch-goals)
+   * [Known Bugs](#known-bugs)
+   * [Support And Contact Details](#support-and-contact-details)
+<!--te-->
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is a simple but functional CRUD (Create, Read, Update, Delete) app which allows the users to track their to do items. The app focuses on UX/UI so that the user can confirm/understand all their actions. SweetAlert was used to replace the standard Javascript alerts.
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * _React 16.8.6_
+  * _Sweetalert 2.1.2_
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Setup and Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* `cd desktop` Navigate to the desktop.
+* `git clone "https://github.com/MarcLignarius/react.todolist.git"` Clone this repository to your desktop.
+* `cd react.todolist` Open up the cloned repository.
+* `atom .` or `code .` Open the repository in a preferred text editor such as Atom or Visual Studio Code.
+* `npm install` This will allow the viewer of this project to have access to the CLI (command line interface) for webpack.
+* `npm run start` to launch the app which will be hosted at  http://localhost:3000/
+* Note: The app will automatically reload if you change any of the source files. This is a continuous monitoring so to stop it just type the key combination `Ctrl + C` within the terminal.
 
-### `npm run eject`
+## User Stories
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Adding a Task
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Add the Task | User Confirmation | App Confirmation |
+|:-------------:|:-------------:|:-------------:|
+| ![Image of ss1](https://i.imgur.com/WJ6oBPB.png) | ![Image of ss2](https://i.imgur.com/hfjdSDw.png) |  ![Image of ss3](https://i.imgur.com/DntWhkl.png)|
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Editing a Task
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| Edit the Task | User Confirmation | App Confirmation |
+|:-------------:|:-------------:|:-------------:|
+| ![Image of ss4](https://i.imgur.com/G9duiGU.png) | ![Image of ss5](https://i.imgur.com/QMEPvzX.png) |  ![Image of ss6](https://i.imgur.com/H1ihLgS.png)|
 
-## Learn More
+### Deleting a Task
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Delete the Task | User Confirmation | App Confirmation |
+|:-------------:|:-------------:|:-------------:|
+| ![Image of ss7](https://i.imgur.com/ouNg4m7.png) | ![Image of ss8](https://i.imgur.com/f6xgAie.png) |  ![Image of ss9](https://i.imgur.com/aT8vnoe.png)|
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Minimum Viable Product
+- [x] As a user, I want to add a task 
+- [x] As a user, I want to edit a task
+- [x] As a user, I want to delete a task
 
-### Code Splitting
+## Stretch Goals
+- [x] As a user, I want the program to prompt me to confirm my actions
+- [x] As a user, I want the program to confirm the latest action
+- [] As a user, I want to add categories
+- [] As a user, I want to edit categories
+- [] As a user, I want to delete categories
+- [] As a user, I want to reorder tasks by clicking and dragging them 
+- [] As a user, I want to choose a different theme
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Known Bugs
+There are no known bugs as of that last release.
 
-### Analyzing the Bundle Size
+## Support and Contact Details
+Please contact me at marcdaviesriot@gmail.com if you have any questions. Your feedback is always welcomed!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2019 **_Marc Davies_**
