@@ -26,7 +26,7 @@ const App = () => {
     setTasks(tasks.map(task => (task.id === id ? updatedTask : task)))
   }
 
-  const deleteUser = id => {
+  const deleteTask = id => {
     setTasks(tasks.filter(task => task.id !== id))
   }
 
@@ -36,7 +36,7 @@ const App = () => {
 			<div className="flex-large">
 				{editing ? (
 					<Fragment>
-						<h2>Edit user</h2>
+						<h2>Edit Task</h2>
 						<EditTaskForm
 							editing={editing}
 							setEditing={setEditing}
@@ -46,14 +46,14 @@ const App = () => {
 					</Fragment>
 				) : (
 					<Fragment>
-						<h2>Add user</h2>
+						<h2>Add New Task</h2>
 						<AddTaskForm addTask={addTask} />
 					</Fragment>
 				)}
 			</div>
 			<div className="flex-large">
-				<h2>View users</h2>
-				<TaskTable tasks={tasks} editRow={editRow} deleteUser={deleteUser} />
+				<h2>View Tasks</h2>
+				<TaskTable tasks={tasks} editRow={editRow} deleteTask={deleteTask} />
 			</div>
 		</div>
 	)

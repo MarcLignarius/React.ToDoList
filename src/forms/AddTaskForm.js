@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import swal from 'sweetalert';
 
-const AddUserForm = props => {
+const AddTaskForm = props => {
 
-  const handleOnAddClick = user => {
+  const handleOnAddClick = task => {
     swal({
       title: "Add user?",
       text: "Click OK to add user.",
@@ -17,7 +17,7 @@ const AddUserForm = props => {
         swal("User has been added.", {
           icon: "success",
         });
-        props.addTask(user)
+        props.addTask(task)
       } else {
         swal("User will not be added.", {
           icon: "info",
@@ -27,28 +27,26 @@ const AddUserForm = props => {
   }
 
   const initialFormstate = { id: null, name: '', username: ''}
-  const [user, setUser] = useState(initialFormstate)
+  const [task, setTask] = useState(initialFormstate)
   
   const handleInputChange = e => {
     const { name, value } = e.target
-    setUser({...user, [name]: value })
+    setTask({...task, [name]: value })
   }
   
   return (
     <form onSubmit={event => {
       event.preventDefault();
-      if (!user.name || !user.username) 
+      if (!task.name) 
       return
-      handleOnAddClick(user)
-      setUser(initialFormstate)
+      handleOnAddClick(task)
+      setTask(initialFormstate)
     }}>
       <label>Name</label>
-      <input type="text" name="name" value={user.name} onChange={handleInputChange} />
-      <label>Username</label>
-      <input type="text" name="username" value={user.username} onChange={handleInputChange} />
+      <input type="text" name="name" value={task.name} onChange={handleInputChange} />
       <button>Add new user</button>
     </form>
   )
 }
 
-export default AddUserForm
+export default AddTaskForm

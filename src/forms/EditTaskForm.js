@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import swal from 'sweetalert';
 
-const EditUserForm = props => {
+const EditTaskForm = props => {
 
   const handleOnEditClick= (id, task) => {
     swal({
@@ -46,12 +46,10 @@ const EditUserForm = props => {
     >
       <label>Name</label>
       <input type="text" name="name" value={task.name} onChange={handleInputChange} />
-      <label>Username</label>
-      <input type="text" name="username" value={task.taskname} onChange={handleInputChange} />
-      <button>Update user</button>
+      <button>Update task</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">Cancel</button>
     </form>
   )
 }
 
-export default EditUserForm
+export default EditTaskForm

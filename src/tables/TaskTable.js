@@ -17,7 +17,7 @@ const UserTable = props => {
         swal("User has been deleted.", {
           icon: "success",
         });
-        props.deleteUser(id)
+        props.deleteTask(id)
       } else {
         swal("User has not been deleted.", {
           icon: "info",
