@@ -26,7 +26,7 @@ const AddTaskForm = props => {
     })
   }
 
-  const initialFormstate = { id: null, name: ''}
+  const initialFormstate = { id: null, description: ''}
   const [task, setTask] = useState(initialFormstate)
   
   const handleInputChange = e => {
@@ -42,7 +42,7 @@ const AddTaskForm = props => {
       handleOnAddClick(task)
       setTask(initialFormstate)
     }}>
-      <label>Name</label>
+      <label>Description</label>
       <input type="text" name="name" value={task.name} onChange={handleInputChange} />
       <button>Add new task</button>
     </form>
