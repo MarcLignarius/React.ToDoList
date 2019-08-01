@@ -8,7 +8,7 @@ const App = () => {
 
   const [tasks, setTasks] = useState(tasksData)
   const [editing, setEditing] = useState(false)
-  const initialFormState = { id: null, name: '', username: ''}
+  const initialFormState = { id: null, name: ''}
   const [currentTask, setCurrentTask] = useState(initialFormState)
 
   const addTask = task => {
@@ -18,7 +18,7 @@ const App = () => {
 	
 	const editRow = task => {
     setEditing(true)
-    setCurrentTask({ id: task.id, name: task.name, taskname: task.taskname })
+    setCurrentTask({ id: task.id, name: task.name })
   }
 
   const editTask = (id, updatedTask) => {
@@ -32,7 +32,7 @@ const App = () => {
 
   return (
 		<div className="container">
-			<h1>CRUD App with Hooks</h1>
+			<h1>My Todo List</h1>
 			<div className="flex-large">
 				{editing ? (
 					<Fragment>

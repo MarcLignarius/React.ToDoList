@@ -1,12 +1,12 @@
 import React from 'react';
 import swal from 'sweetalert';
 
-const UserTable = props => {
+const TaskTable = props => {
 
   const handleOnDeleteClick = id => {
     swal({
       title: "Are you sure?",
-      text: "Click ok to delete user.",
+      text: "Click ok to delete task.",
       icon: "warning",
       buttons: true,
       dangerMode: true,
@@ -14,12 +14,12 @@ const UserTable = props => {
     .then(
       (willDelete) => {
       if (willDelete) {
-        swal("User has been deleted.", {
+        swal("Task has been deleted.", {
           icon: "success",
         });
         props.deleteTask(id)
       } else {
-        swal("User has not been deleted.", {
+        swal("Task has not been deleted.", {
           icon: "info",
         });
       }
@@ -30,26 +30,24 @@ const UserTable = props => {
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Username</th>
+          <th>Description</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         {props.tasks.length > 0 ? (
-          props.tasks.map(user => (
-            <tr key={user.id}>
-              <td>{user.name}</td>
-              <td>{user.username}</td>
+          props.tasks.map(task => (
+            <tr key={task.id}>
+              <td>{task.name}</td>
               <td>
-                <button onClick={() => {props.editRow(user)}} className="button muted-button">Edit</button>
-                <button onClick={() => handleOnDeleteClick(user.id)} className="button muted-button">Delete</button>
+                <button onClick={() => {props.editRow(task)}} className="button muted-button">Edit</button>
+                <button onClick={() => handleOnDeleteClick(task.id)} className="button muted-button">Delete</button>
               </td>
             </tr>
           ))
         ) : (
           <tr>
-            <td colSpan={3}>There are currently no users.</td>
+            <td colSpan={3}>The list is currently empty.</td>
           </tr>
         )}
       </tbody>
@@ -57,4 +55,4 @@ const UserTable = props => {
   )  
 }
 
-export default UserTable
+export default TaskTable
