@@ -26,7 +26,7 @@ const AddTaskForm = props => {
     })
   }
 
-  const initialFormstate = { id: null, description: ''}
+  const initialFormstate = { id: null, name: ''}
   const [task, setTask] = useState(initialFormstate)
   
   const handleInputChange = e => {

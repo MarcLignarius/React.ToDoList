@@ -44,7 +44,7 @@ const EditTaskForm = props => {
       handleOnEditClick(task.id, task)
     }}
     >
-      <label>Name</label>
+      <label>Description</label>
       <input type="text" name="name" value={task.name} onChange={handleInputChange} />
       <button>Update task</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">Cancel</button>
