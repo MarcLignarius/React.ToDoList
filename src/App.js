@@ -4,7 +4,11 @@ import AddTaskForm from './forms/AddTaskForm'
 import EditTaskForm from './forms/EditTaskForm'
 
 const App = () => {
-  const tasksData = []
+  const tasksData = [
+    {id: 1, name: 'Walk the dog'},
+    {id: 2, name: 'Do the dishes'},
+    {id: 3, name: 'Mow the lawn'}
+  ]
 
   const [tasks, setTasks] = useState(tasksData)
   const [editing, setEditing] = useState(false)
