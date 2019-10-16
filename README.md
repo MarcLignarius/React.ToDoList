@@ -25,7 +25,7 @@
 
 ## Description
 
-This is a simple but functional CRUD (Create, Read, Update, Delete) app which allows the users to track their to do items. The app focuses on UX/UI so that the user can confirm/understand all their actions. SweetAlert was used to replace the standard Javascript alerts.
+This is a simple but functional CRUD (Create, Read, Update, Delete) app which allows the users to track their to do items. The app focuses on UX/UI so that the user can confirm/understand all their actions. SweetAlert was used to replace the standard Javascript alerts. This application was built with the help of Tania Rascia's "Build a CRUD App in React with Hooks": https://www.taniarascia.com/crud-app-in-react-with-hooks/.
 
 ## Technologies Used
 
