@@ -42,7 +42,7 @@ This is a simple but functional CRUD (Create, Read, Update, Delete) app which al
 * `npm run start` to launch the app which will be hosted at  http://localhost:3000/
 * Note: The app will automatically reload if you change any of the source files. This is a continuous monitoring so to stop it just type the key combination `Ctrl + C` within the terminal.
 
-Alternatively, visit the deployed live version of the application here: https://floating-castle-57741.herokuapp.com/
+Alternatively, visit the deployed live version of the application here: https://floating-castle-57741.herokuapp.com/. Please note it may take up to a minute or so for the application to launch.
 
 ## User Stories
 
